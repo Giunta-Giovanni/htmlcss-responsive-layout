@@ -5,20 +5,86 @@
 }
 
 /* mobile first */
+
+/* intestazione */
 header{
+    margin: 1rem;
+    font-size: 2rem;
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff9614;
+
+      
+
     /* debug */
     background-color: white;
-    min-height: 100px
+    /* min-height: 100px */
 }
 
+header h1{
+    text-align: center;
+}
+
+/* contenuto principale */
 main{
     /* debug */
     background-color: lightgrey;
     min-height: 600px;
 }
 
+/* piè di pagina */
 footer{
     /* debug */
     background-color:plum ;
-    min-height: 100px;
+    /* min-height: 100px; */
+}
+footer .row{
+    padding: 1rem 0;
+}
+
+footer .col{
+    text-align: center;
+    margin: 1rem auto;
+    width: 70%;
+    /* debug */
+    min-height: 50px;
+    background-color: red;
+    border: 1px dashed black;
+}
+
+
+/* Tablet mode */
+@media screen and (min-width: 768px) {
+    /* intestazione */
+    header h1{
+        text-align: left;
+    }
+
+    /* pie di pagina */
+
+    /* footer */
+    footer .col{
+        width: 50%;
+    }
+
+}
+
+/* Desktop mode */
+@media screen and (min-width: 992px) {
+    /* intestazione */
+
+    /* pie di pagina */
+
+    /* footer */
+    footer .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .col{
+        width: 25%;
+        margin:1rem;
+    }
+
 }
