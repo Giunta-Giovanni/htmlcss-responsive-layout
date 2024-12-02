@@ -8,6 +8,12 @@
 /* general */
 body{
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 400;
+    font-stretch:semi-expanded;
 }
 ul{
     list-style: none;
@@ -20,6 +26,7 @@ a{
     display: flex;
 }
 
+/* colori dei loghi */
 .fa-facebook{color: blue;}
 .fa-twitter{color: #009eff; }
 .fa-instagram{color: #e46d99 ;}
@@ -59,9 +66,9 @@ main{
 .container{
     width: 90%;
     margin: 0 auto;
-    background-color: aqua;
-    min-height: 500px;
     /* debug */
+    background-color: aqua;
+    /* min-height: 1000px; */
     border: 1px dashed black;
 }
 
@@ -91,12 +98,17 @@ main{
     height: 150px;
 }
 
-ul.flex{
+#external-link ul.flex{
     justify-content: space-between;
+
+    margin: 2rem 0;
+    /* debug */
+    border: 1px dashed black;
 }
 .logo{
     text-align: center;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
+    padding: 0.6rem 1rem;
     /* debug */
     background-color: white;
     border-radius: 9999px;
@@ -105,17 +117,51 @@ ul .supplemento {
     display: none;
 }
 
+.banner{
+    margin: 2rem 0;
+    display: none;
+    /* debug */
+    background-color: lightblue;
+    border: 1px dashed black;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.sep-line{
+    margin: 1rem 0;
+    width: 10%;
+    border-top:2px solid #ff9614;
+}
+
+
+#presentation img{
+    width: 80%;
+    margin: 1rem auto;
+    display: block;
+    
+}
+
+#presentation p{
+    font-size: 20px;
+    line-height:2;
+}
+
+
 
 
 
 /* piè di pagina */
 footer{
+    color: white;
     /* debug */
-    background-color:plum ;
+    background-color:#7c69a4 ;
     /* min-height: 100px; */
 }
 footer .row{
     padding: 1rem 0;
+    
 }
 
 footer .col{
@@ -123,9 +169,32 @@ footer .col{
     margin: 1rem auto;
     width: 70%;
     /* debug */
-    min-height: 50px;
-    background-color: red;
-    border: 1px dashed black;
+    /* min-height: 50px; */
+    /* background-color: red; */
+    /* border: 1px dashed black; */
+}
+footer h5{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+footer h6{
+    font-weight: 200;
+    font-size: 14px;
+
+    
+}
+footer ul.flex{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+footer li{
+    margin: 1rem 0.5rem;
+}
+footer a{
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+
 }
 
 /* responsive */
@@ -150,9 +219,27 @@ footer .col{
     }
 
     .logo{
-        padding:10px 50px;
+        padding: 0.6rem 3rem;
+
     }
 
+    .banner{
+        display: block;
+    }
+
+    #presentation img{
+        margin: 1rem 1rem 0 0;
+        width: 40%;
+        float: left;
+     }
+
+    .clearfix::after{
+        display: table;
+        content: "";
+        clear: both;
+    }
+
+    
     /* pie di pagina */
     footer .col{
         width: 50%;
@@ -187,7 +274,7 @@ footer .col{
 
     .logo{
         font-size: 13px;
-        padding: 10px 25px;
+        padding: 0.6rem 1.5rem;
     }
 
     ul .supplemento{
@@ -195,14 +282,35 @@ footer .col{
     }
 
     /* footer */
+    footer{
+        font-size: 12px;
+    }
     footer .row{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     footer .col{
-        width: 25%;
+        width: 40%;
         margin:1rem;
+        text-align: left;
+    }
+
+    footer h5{
+        font-size: 13px;
+        margin: 5px 0;
+    }
+    footer h6{
+        font-size: 13px;
+    }
+    footer li {
+        margin: 0;
+        margin-right:3px;
+    }
+
+    footer a{
+        font-size: 13px;
     }
 
 }
