@@ -5,33 +5,108 @@
 }
 
 /* mobile first */
+/* general */
+body{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.flex{
+    display: flex;
+}
+
+.fa-facebook{color: blue;}
+.fa-twitter{color: #009eff; }
+.fa-instagram{color: #e46d99 ;}
+.fa-pinterest{color: #e83535;}
+.fa-youtube{color: #e62222;}
+
+
 
 /* intestazione */
 header{
-    margin: 1rem;
-    font-size: 2rem;
-    font-family: "Nerko One", cursive;
-    font-weight: 400;
-    font-style: normal;
-    color: #ff9614;
-
-      
-
+  
     /* debug */
     background-color: white;
     /* min-height: 100px */
 }
 
 header h1{
+    padding: 1rem;
+
     text-align: center;
+    font-size: 4rem;
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff9614;
 }
+
+
+
+
 
 /* contenuto principale */
 main{
-    /* debug */
     background-color: lightgrey;
-    min-height: 600px;
 }
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    background-color: aqua;
+    min-height: 500px;
+    /* debug */
+    border: 1px dashed black;
+}
+
+#categoria{
+    margin-top: 1rem;
+    color: #aeaeb9;
+}
+
+#titolo-ricetta{
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    color: #4e3969;
+}
+
+#titolo-ricetta .supplemento{
+    display: none;
+}
+
+.container .row{
+    margin: 2rem 0;
+}
+.col-left, .col-right{
+    /* debug */
+    background-color: red;
+    border: 1px dashed black;
+    width: 100%;
+    height: 150px;
+}
+
+ul.flex{
+    justify-content: space-between;
+}
+.logo{
+    text-align: center;
+    padding: 10px 15px;
+    /* debug */
+    background-color: white;
+    border-radius: 9999px;
+}
+ul .supplemento {
+    display: none;
+}
+
+
+
 
 /* piè di pagina */
 footer{
@@ -53,28 +128,71 @@ footer .col{
     border: 1px dashed black;
 }
 
-
-/* Tablet mode */
+/* responsive */
+/*************************************************************
+                    Tablet mode 
+ ************************************************************/
 @media screen and (min-width: 768px) {
     /* intestazione */
     header h1{
+        padding: 0.8rem;
+        font-size: 3rem;
         text-align: left;
     }
 
-    /* pie di pagina */
+    /* contenuto principale */
+    .container{
+        width: 85%;
+    }
+    
+    #titolo-ricetta .supplemento{
+        display: inline;
+    }
 
-    /* footer */
+    .logo{
+        padding:10px 50px;
+    }
+
+    /* pie di pagina */
     footer .col{
         width: 50%;
     }
 
 }
-
-/* Desktop mode */
+/*************************************************************
+                    Desktop mode 
+ ************************************************************/
 @media screen and (min-width: 992px) {
     /* intestazione */
+    header h1{
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
 
-    /* pie di pagina */
+   /* contenuto principale */
+   .container{
+        width: 70%;
+    }
+
+    .container .row{
+        display:flex
+    }
+
+    .col-left{
+        width: 65%;
+    }
+    .col-right{
+        width: 35%;
+    }
+
+    .logo{
+        font-size: 13px;
+        padding: 10px 25px;
+    }
+
+    ul .supplemento{
+        display: inline;
+    }
 
     /* footer */
     footer .row{
