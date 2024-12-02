@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* mobile first */
+header{
+    /* debug */
+    background-color: white;
+    min-height: 100px
+}
+
+main{
+    /* debug */
+    background-color: lightgrey;
+    min-height: 600px;
+}
+
+footer{
+    /* debug */
+    background-color:plum ;
+    min-height: 100px;
+}
