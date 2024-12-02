@@ -22,9 +22,7 @@ a{
     text-decoration: none;
     color: black;
 }
-.flex{
-    display: flex;
-}
+
 
 /* colori dei loghi */
 .fa-facebook{color: blue;}
@@ -60,21 +58,22 @@ header h1{
 
 /* contenuto principale */
 main{
-    background-color: lightgrey;
+    background-color: #f6f5f3;
 }
 
 .container{
     width: 90%;
     margin: 0 auto;
     /* debug */
-    background-color: aqua;
+    /* background-color: aqua; */
     /* min-height: 1000px; */
-    border: 1px dashed black;
+    /* border: 1px dashed black; */
 }
 
 #categoria{
-    margin-top: 1rem;
+    padding-top: 1rem;
     color: #aeaeb9;
+    font-weight: 400;
 }
 
 #titolo-ricetta{
@@ -90,20 +89,43 @@ main{
 .container .row{
     margin: 2rem 0;
 }
-.col-left, .col-right{
-    /* debug */
-    background-color: red;
-    border: 1px dashed black;
+
+.col-left img{
     width: 100%;
-    height: 150px;
+      /* debug */
+    /* background-color: red; */
+    /* border: 1px dashed black; */
+    /* height: 150px; */
 }
 
+.col-right{
+    background-color: white;
+    padding: 2rem;
+    font-size: 20px;
+     /* debug */
+    /* background-color: red; */
+    /* border: 1px dashed black; */
+    /* height: 150px; */
+}
+
+.col-right h4{
+    font-size: 25px;
+    margin-bottom: 2rem;
+}
+
+.col-right li{
+    line-height: 2;
+}
+
+
+
 #external-link ul.flex{
+    display: flex;
     justify-content: space-between;
 
     margin: 2rem 0;
     /* debug */
-    border: 1px dashed black;
+    /* border: 1px dashed black; */
 }
 .logo{
     text-align: center;
@@ -131,7 +153,7 @@ ul .supplemento {
 
 .sep-line{
     margin: 1rem 0;
-    width: 10%;
+    width: 20%;
     border-top:2px solid #ff9614;
 }
 
@@ -146,6 +168,7 @@ ul .supplemento {
 #presentation p{
     font-size: 20px;
     line-height:2;
+    padding-bottom: 5rem;
 }
 
 
@@ -166,8 +189,8 @@ footer .row{
 
 footer .col{
     text-align: center;
-    margin: 1rem auto;
-    width: 70%;
+    margin: 0.5rem auto;
+    width: 80%;
     /* debug */
     /* min-height: 50px; */
     /* background-color: red; */
@@ -184,11 +207,12 @@ footer h6{
     
 }
 footer ul.flex{
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 footer li{
-    margin: 1rem 0.5rem;
+    margin: 0.5rem 0.5rem;
 }
 footer a{
     color: white;
@@ -218,6 +242,27 @@ footer a{
         display: inline;
     }
 
+    .col-right{
+        padding: 10px
+    }
+    .col-right h4{
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+    }
+
+    .col-right ul.flex{
+        display: flex;
+        flex-wrap: wrap;
+   
+    }
+
+    .col-right li{
+        width: 32%;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    
+
     .logo{
         padding: 0.6rem 3rem;
 
@@ -225,6 +270,10 @@ footer a{
 
     .banner{
         display: block;
+    }
+
+    .sep-line{
+        width: 12%;
     }
 
     #presentation img{
@@ -253,7 +302,7 @@ footer a{
     /* intestazione */
     header h1{
         padding: 0.5rem;
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
    /* contenuto principale */
@@ -266,11 +315,23 @@ footer a{
     }
 
     .col-left{
-        width: 65%;
+        width: 70%;
     }
     .col-right{
-        width: 35%;
+        width: 30%;
     }
+    .col-right ul.flex{
+        display: block;
+    }
+
+    .col-right li{
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+
+
 
     .logo{
         font-size: 13px;
@@ -289,6 +350,7 @@ footer a{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0;
     }
 
     footer .col{
